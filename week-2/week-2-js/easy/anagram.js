@@ -5,7 +5,22 @@
 */
 
 function isAnagram(str1, str2) {
+  // edge case
+  if(str1.length !== str2.length) return false;
 
+  function sortString(str) { 
+    return str.toLowerCase().split('').sort().join('');
+  }
+
+  if(sortString(str1) === sortString(str2)) 
+    return true;
+  else 
+    return false;
+  
 }
+if(isAnagram("spar","Rasp")) 
+  console.log("true");
+else 
+  console.log("false");
 
 module.exports = isAnagram;
