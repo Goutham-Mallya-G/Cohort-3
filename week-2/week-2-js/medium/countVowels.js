@@ -6,7 +6,7 @@
 */
 
 function countVowels(str) {
-    // Your code here
+    return str.toLowerCase().split("").filter(vowel => ["a","e","i","o","u"].includes(vowel)).length
 }
-
+console.log(countVowels("element is in here"))
 module.exports = countVowels;
